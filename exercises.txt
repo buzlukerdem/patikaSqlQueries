@@ -1,0 +1,163 @@
+-- postgresql kurmadım. Sorgular asagida ki gibidir.
+
+-- 1) SELECT title, description FROM film ;
+-- 2) SELECT * FROM film WHERE lenght > 60 AND lenght < 75;
+-- 3) SELECT * FROM film WHERE rental_rate = 0.99 AND replacement_cost = 12.99 OR replacement_cost = 28.99;
+-- 4) SELECT first_name, last_name FROM customer WHERE first_name = "Mary";
+-- 5) SELECT * FROM film WHERE NOT(length > 50 AND rental_rate = 2.99 OR rental_rate 4.99);
+
+-- ERDEM BUZLUK...
+
+
+
+-- postgresql kurmadm. Sorgular asagida ki gibidir.
+
+-- 1) SELECT * FROM film WHERE replacement cost BETWEEN 12.99 AND 16.98;
+-- 2) SELECT first_name, last_name FROM actor WHERE first_name IN('Nick', 'Penelope', 'Ed');
+-- 3) SELECT * FROM film WHERE rental_rate IN(0.99, 2.99, 4.99) AND replacement_cost IN(12.99, 15.99, 28.99);
+
+-- ERDEM BUZLUK...
+
+-- first_name LIKE 'M%' bas harfi m ile..
+
+--select Musteriad from Tbl_Musteriler where Musteriad like 'e%' 
+
+
+-- postgresql kurmadım. Sorgular asagida ki gibidir.
+
+-- 1) SELECT country FROM country WHERE country LIKE 'A%A';
+-- 2) SELECT country FROM country WHERE country LIKE '_____%n';
+-- 3) SELECT title FROM film WHERE title ILIKE '%t%t%t%t%';
+-- 4) SELECT * FROM film WHERE (title LIKE 'C%') AND (length >90) AND (rental_rate=2.99);
+
+-- ERDEM BUZLUK...
+
+
+-- postgresql kurmadım. Sorgular asagida ki gibidir.
+
+-- 1) SELECT DISTINCT(replacement_cost) FROM film;
+-- 2) SELECT COUNT(DISTINCT(replacement_cost) FROM film;
+-- 3) SELECT COUNT(*) FROM film WHERE title LIKE 't%' AND rating = 'G';
+-- 4) SELECT COUNT(*) FROM country WHERE country LIKE '_____';
+-- 5) SELECT COUNT(*) FROM city WHERE city_name LIKE 'R%' AND city_name LIKE 'r%';
+
+-- ERDEM BUZLUK...
+
+
+
+
+
+
+
+--SELECT count (DISTINCT(Tutar))  FROM Tbl_Hareket
+
+-- postgresql kurmadım. Sorgular asagida ki gibidir.
+
+-- 1) SELECT title FROM film WHERE title LIKE '%n' ORDER BY length desc limit 5;
+-- 2) SELECT title FROM film WHERE title LIKE '%n' ORDER BY length asc offset 5 limit 5;
+-- postgresql kurmadım. Sorgular asagida ki gibidir.
+
+-- 1) SELECT title, description FROM film ;
+-- 2) SELECT * FROM film WHERE lenght > 60 AND lenght < 75;
+-- 3) SELECT * FROM film WHERE rental_rate = 0.99 AND replacement_cost = 12.99 OR replacement_cost = 28.99;
+-- 4) SELECT first_name, last_name FROM customer WHERE first_name = "Mary";
+-- 5) SELECT * FROM film WHERE NOT(length > 50 AND rental_rate = 2.99 OR rental_rate 4.99);
+
+-- ERDEM BUZLUK...
+
+
+
+-- postgresql kurmadım. Sorgular asagida ki gibidir.
+
+-- 1) SELECT * FROM film WHERE replacement cost BETWEEN 12.99 AND 16.98;
+-- 2) SELECT first_name, last_name FROM actor WHERE first_name IN('Nick', 'Penelope', 'Ed');
+-- 3) SELECT * FROM film WHERE rental_rate IN(0.99, 2.99, 4.99) AND replacement_cost IN(12.99, 15.99, 28.99);
+
+-- ERDEM BUZLUK...
+
+-- first_name LIKE 'M%' bas harfi m ile..
+
+--select Musteriad from Tbl_Musteriler where Musteriad like 'e%' 
+
+
+-- postgresql kurmadım. Sorgular asagida ki gibidir.
+
+-- 1) SELECT country FROM country WHERE country LIKE 'A%A';
+-- 2) SELECT country FROM country WHERE country LIKE '_____%n';
+-- 3) SELECT title FROM film WHERE title ILIKE '%t%t%t%t%';
+-- 4) SELECT * FROM film WHERE (title LIKE 'C%') AND (length >90) AND (rental_rate=2.99);
+
+-- ERDEM BUZLUK...
+
+
+-- postgresql kurmadım. Sorgular asagida ki gibidir.
+
+-- 1) SELECT DISTINCT(replacement_cost) FROM film;
+-- 2) SELECT COUNT(DISTINCT(replacement_cost) FROM film;
+-- 3) SELECT COUNT(*) FROM film WHERE title LIKE 't%' AND rating = 'G';
+-- 4) SELECT COUNT(*) FROM country WHERE country LIKE '_____';
+-- 5) SELECT COUNT(*) FROM city WHERE city_name LIKE 'R%' AND city_name LIKE 'r%';
+
+-- ERDEM BUZLUK...
+
+
+
+
+
+
+
+--SELECT count (DISTINCT(Tutar))  FROM Tbl_Hareket
+
+-- postgresql kurmadım. Sorgular asagida ki gibidir.
+
+-- 1) SELECT title FROM film WHERE title LIKE '%n' ORDER BY length desc limit 5;
+-- 2) SELECT title FROM film WHERE title LIKE '%n' ORDER BY length asc offset 5 limit 5;
+-- 3) SELECT store_id, last_name FROM customer WHERE store_id = 1 ORDER BY last_name limit 4;
+
+-- ERDEM BUZLUK...
+
+
+-- postgresql kurmadım. Sorgular asagida ki gibidir.
+
+-- 1) SELECT AVG(rental_rate) FROM film
+-- 2) SELECT COUNT(title) FROM film WHERE title LIKE 'C%';
+-- 3) SELECT MAX(length) FROM film WHERE rental_rate = 0.99; 
+-- 4) SELECT COUNT(DISTINCT(replacement_cost)) FROM film WHERE length > 150;
+
+-- ERDEM BUZLUK...
+
+
+-- postgresql kurmadım. Sorgular asagida ki gibidir.
+
+-- 1) SELECT rating FROM film GROUP BY rating;
+-- 2) SELECT replacement_cost, COUNT(*) FROM film GROUP BY replacement_cost HAVING COUNT(*) > 50
+-- 3) SELECT store_id, COUNT(*) FROM customer GROUP BY store_id; 
+-- 4) SELECT country_id, COUNT(*) FROM city GROUP BY country_id ORDER BY COUNT(*) DESC LIMIT 1;
+
+-- ERDEM BUZLUK...
+
+
+
+-- Tablo Olusturma --
+
+-- 1) CREATE TABLE employee (
+--    id serial int primary key,
+--    name varchar(50) NOT NULL,
+--    birthday date,
+--    email varchar(100)
+--);
+
+-- 3) UPDATE employee SET name = "erdem", birthday = "1998-05-09", email = "erdem@buzluk.com" WHERE  id = 1;
+--    UPDATE employee SET name = "hasan", birthday = "1928-05-19", email = "hasan@can.com" WHERE  name = "hasan";
+--    UPDATE employee SET name = "emrah", birthday = "1988-11-23", email = "emrah@dilek.com" WHERE  bithday = "1988-11-23";
+--    UPDATE employee SET name = "gamze", birthday = "1992-01-14", email = "gamze@acer.com" WHERE  id = 4;
+--    UPDATE employee SET name = "hülya", birthday = "2000-03-01", email = "hülya@tutar.com" WHERE  email = "hülya@tutar.com";
+
+-- 4) DELETE FROM employee WHERE id = 6;
+--    DELETE FROM employee WHERE name = "Nancy";
+--    DELETE FROM employee WHERE birthday = "2021-12-22";
+--    DELETE FROM employee WHERE email = "lbernhard8@yelp.com";
+--    DELETE FROM employee WHERE id = 10;
+
+
+www.patika.dev
